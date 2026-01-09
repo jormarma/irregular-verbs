@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irregular Verbs Quest | Aventura de Verbos Irregulares</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Three.js Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Game UI Overlay -->
+    <div id="game-container">
+        <!-- Header -->
+        <header>
+            <h1>🌟 Irregular Verbs Quest 🌟</h1>
+            <p class="subtitle spanish-text">Aventura de Verbos Irregulares</p>
+        </header>
+
+        <!-- Language Selection Screen -->
+        <div id="language-screen" class="screen">
+            <div class="card welcome-card">
+                <h2>🌐 Choose Language / Elige Idioma</h2>
+                <p>How would you like to see the interface?</p>
+                <p class="spanish-text">¿Cómo quieres ver la interfaz?</p>
+                <div class="language-options">
+                    <button id="lang-bilingual" class="btn btn-primary lang-btn">🇬🇧 English + 🇪🇸 Español</button>
+                    <button id="lang-english" class="btn btn-secondary lang-btn">🇬🇧 English Only</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Start Screen -->
+        <div id="start-screen" class="screen hidden">
+            <div class="card welcome-card">
+                <h2 data-en="Welcome!" data-es="¡Bienvenido!">Welcome! ¡Bienvenido!</h2>
+                <p data-en="Master 90 irregular verbs across 18 exciting levels!"
+                    data-es="¡Domina 90 verbos irregulares en 18 niveles emocionantes!">Master 90 irregular verbs across
+                    18 exciting levels!</p>
+                <p class="spanish-text">¡Domina 90 verbos irregulares en 18 niveles emocionantes!</p>
+                <div class="start-features">
+                    <div class="feature">🎯 18 Levels</div>
+                    <div class="feature">⏱️ 5-Minute Challenge</div>
+                    <div class="feature">⌨️ Virtual Keyboard</div>
+                    <div class="feature">🏆 Beat Your Records</div>
+                </div>
+                <button id="start-btn" class="btn btn-primary" data-en="Start Learning" data-es="Empezar">Start Learning
+                    / Empezar</button>
+            </div>
+        </div>
+
+        <!-- Stage Selection Screen -->
+        <div id="stage-select-screen" class="screen hidden">
+            <div class="stage-select-container">
+                <h2 data-en="Select a Level" data-es="Selecciona un Nivel">Select a Level / Selecciona un Nivel</h2>
+                <p data-en="Complete 10 questions in under 5 minutes!"
+                    data-es="¡Completa 10 preguntas en menos de 5 minutos!">Complete 10 questions in under 5 minutes!
+                </p>
+                <p class="spanish-text">¡Completa 10 preguntas en menos de 5 minutos!</p>
+                <div id="stage-buttons" class="stage-grid"></div>
+            </div>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="screen hidden">
+            <!-- Game Header -->
+            <div class="game-header">
+                <div class="stage-info-header">
+                    <h2 id="stage-number">Level 1</h2>
+                    <p id="question-counter">Question 1 / 10</p>
+                </div>
+                <div class="timer-container">
+                    <span class="timer-label">⏱️</span>
+                    <span id="timer-display" class="timer-display">5:00.0</span>
+                </div>
+                <button id="quit-btn" class="btn btn-quit" data-en="Quit" data-es="Salir">Quit / Salir</button>
+            </div>
+
+            <!-- Quiz Content -->
+            <div class="quiz-container">
+                <div class="card quiz-card">
+                    <!-- Top Section: Question and Input -->
+                    <div class="quiz-top">
+                        <div class="verb-display">
+                            <span class="verb-base" id="verb-base"></span>
+                            <span class="verb-spanish" id="verb-spanish"></span>
+                        </div>
+
+                        <h3 id="question-text" class="question-text"></h3>
+
+                        <!-- Answer Input -->
+                        <div class="answer-section">
+                            <input type="text" id="answer-input" class="answer-input"
+                                data-placeholder-en="Type your answer" data-placeholder-es="Escribe tu respuesta"
+                                placeholder="Type your answer / Escribe tu respuesta" readonly>
+                        </div>
+
+                        <!-- Feedback -->
+                        <div id="feedback" class="feedback hidden"></div>
+                    </div>
+
+                    <!-- Bottom Section: Keyboard and Buttons -->
+                    <div class="quiz-bottom">
+                        <!-- Virtual Keyboard -->
+                        <div class="virtual-keyboard">
+                            <div class="keyboard-row">
+                                <label class="keyboard-label" data-en="Vowels:" data-es="Vocales:">Vowels /
+                                    Vocales:</label>
+                                <div id="keyboard-vowels" class="keyboard-keys"></div>
+                            </div>
+                            <div class="keyboard-row">
+                                <label class="keyboard-label" data-en="Consonants:" data-es="Consonantes:">Consonants /
+                                    Consonantes:</label>
+                                <div id="keyboard-consonants" class="keyboard-keys"></div>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="action-buttons">
+                            <button id="backspace-btn" class="btn btn-secondary">⌫ Backspace</button>
+                            <button id="clear-btn" class="btn btn-secondary" data-en="Clear" data-es="Borrar">Clear /
+                                Borrar</button>
+                            <button id="submit-btn" class="btn btn-primary" data-en="Submit" data-es="Enviar">Submit /
+                                Enviar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stage Completion Screen -->
+        <div id="completion-screen" class="screen hidden">
+            <div class="card completion-card">
+                <h2 id="completion-title">🎉 Level <span id="completion-stage"></span> Complete! 🎉</h2>
+                <p class="spanish-text">¡Nivel Completado!</p>
+
+                <div class="completion-stats">
+                    <div class="stat">
+                        <span class="stat-label" data-en="Your Time:" data-es="Tu Tiempo:">Your Time / Tu Tiempo:</span>
+                        <span class="stat-value" id="completion-time"></span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label" data-en="Best Time:" data-es="Mejor Tiempo:">Best Time / Mejor
+                            Tiempo:</span>
+                        <span class="stat-value" id="completion-best"></span>
+                    </div>
+                </div>
+
+                <button id="continue-btn" class="btn btn-primary" data-en="Continue" data-es="Continuar">Continue /
+                    Continuar</button>
+            </div>
+        </div>
+
+        <!-- Time's Up Screen -->
+        <div id="timesup-screen" class="screen hidden">
+            <div class="card error-card">
+                <h2 data-en="⏰ Time's Up!" data-es="¡Se Acabó el Tiempo!">⏰ Time's Up! / ¡Se Acabó el Tiempo!</h2>
+                <p data-en="You didn't complete all questions within 5 minutes."
+                    data-es="No completaste todas las preguntas en 5 minutos.">You didn't complete all questions within
+                    5 minutes.</p>
+                <p class="spanish-text">No completaste todas las preguntas en 5 minutos.</p>
+                <p><strong data-en="Try again!" data-es="¡Inténtalo de nuevo!">Try again! / ¡Inténtalo de
+                        nuevo!</strong></p>
+
+                <div class="button-group">
+                    <button id="retry-btn" class="btn btn-primary" data-en="Retry Level" data-es="Reintentar">Retry
+                        Level / Reintentar</button>
+                    <button id="back-btn" class="btn btn-secondary" data-en="Back to Levels" data-es="Volver">Back to
+                        Levels / Volver</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quit Confirmation Modal -->
+        <div id="quit-modal" class="modal hidden">
+            <div class="modal-content">
+                <h3 data-en="⚠️ Quit Level?" data-es="¿Salir del Nivel?">⚠️ Quit Level? / ¿Salir del Nivel?</h3>
+                <p data-en="Are you sure you want to quit?" data-es="¿Seguro que quieres salir?">Are you sure you want
+                    to quit?</p>
+                <p class="spanish-text">¿Seguro que quieres salir?</p>
+                <p><strong data-en="Your progress will be lost." data-es="Se perderá tu progreso.">Your progress will be
+                        lost.</strong></p>
+                <p class="spanish-text"><strong>Se perderá tu progreso.</strong></p>
+
+                <div class="modal-buttons">
+                    <button id="quit-cancel-btn" class="btn btn-secondary" data-en="Cancel" data-es="Cancelar">Cancel /
+                        Cancelar</button>
+                    <button id="quit-confirm-btn" class="btn btn-danger" data-en="Quit" data-es="Salir">Quit /
+                        Salir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="game.js"></script>
+</body>
+
+</html>
