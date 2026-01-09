@@ -727,6 +727,11 @@ function backToStages() {
     initStageSelector();
 }
 
+function backToLanguageSelection() {
+    document.getElementById('stage-select-screen').classList.add('hidden');
+    document.getElementById('language-screen').classList.remove('hidden');
+}
+
 // ========================================
 // QUIT FUNCTIONALITY
 // ========================================
@@ -803,6 +808,7 @@ document.getElementById('quit-confirm-btn').addEventListener('click', confirmQui
 document.getElementById('continue-btn').addEventListener('click', continueAfterCompletion);
 document.getElementById('retry-btn').addEventListener('click', retryAfterTimesUp);
 document.getElementById('back-btn').addEventListener('click', backToStages);
+document.getElementById('back-to-language-btn').addEventListener('click', backToLanguageSelection);
 
 // Allow Enter key to submit
 document.addEventListener('keydown', (e) => {

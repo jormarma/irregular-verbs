@@ -5,6 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Irregular Verbs Quest | Aventura de Verbos Irregulares</title>
+
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#1a1a2e">
+    <meta name="description"
+        content="Master 90 irregular verbs across 18 exciting levels! ¡Domina 90 verbos irregulares en 18 niveles emocionantes!">
+    <link rel="manifest" href="manifest.json">
+
+    <!-- iOS PWA Support -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Verbs Quest">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192x192.png">
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,6 +81,8 @@
                 </p>
                 <p class="spanish-text">¡Completa 10 preguntas en menos de 5 minutos!</p>
                 <div id="stage-buttons" class="stage-grid"></div>
+                <button id="back-to-language-btn" class="btn btn-secondary" data-en="Change Language"
+                    data-es="Cambiar Idioma">🌐 Change Language / Cambiar Idioma</button>
             </div>
         </div>
 
@@ -201,6 +220,21 @@
     <!-- Three.js Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="game.js"></script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then((registration) => {
+                        console.log('Service Worker registered successfully:', registration.scope);
+                    })
+                    .catch((error) => {
+                        console.log('Service Worker registration failed:', error);
+                    });
+            });
+        }
+    </script>
 </body>
 
 </html>

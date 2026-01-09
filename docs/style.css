@@ -139,6 +139,12 @@ header h1 {
     margin-bottom: 15px;
 }
 
+.stage-select-container p {
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
 .stage-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
