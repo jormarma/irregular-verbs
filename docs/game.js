@@ -1,134 +1,131 @@
 // ========================================
 // IRREGULAR VERBS DATABASE - 18 LEVELS
 // ========================================
-// 90 verbs organized into 18 levels of 5 verbs each
+// 87 verbs organized into 18 levels following the standard irregular verb list
 
 const STAGE_VERBS = {
     1: [
         { base: "be", past: "was/were", participle: "been", spanish: "ser/estar" },
-        { base: "have", past: "had", participle: "had", spanish: "tener" },
-        { base: "do", past: "did", participle: "done", spanish: "hacer" },
-        { base: "say", past: "said", participle: "said", spanish: "decir" },
-        { base: "go", past: "went", participle: "gone", spanish: "ir" }
+        { base: "beat", past: "beat", participle: "beaten", spanish: "golpear/vencer" },
+        { base: "become", past: "became", participle: "become", spanish: "convertirse" },
+        { base: "begin", past: "began", participle: "begun", spanish: "empezar" },
+        { base: "bite", past: "bit", participle: "bitten", spanish: "morder" }
     ],
     2: [
-        { base: "get", past: "got", participle: "gotten", spanish: "obtener" },
-        { base: "make", past: "made", participle: "made", spanish: "hacer" },
-        { base: "know", past: "knew", participle: "known", spanish: "saber/conocer" },
-        { base: "think", past: "thought", participle: "thought", spanish: "pensar" },
-        { base: "take", past: "took", participle: "taken", spanish: "tomar" }
+        { base: "blow", past: "blew", participle: "blown", spanish: "soplar" },
+        { base: "break", past: "broke", participle: "broken", spanish: "romper" },
+        { base: "bring", past: "brought", participle: "brought", spanish: "traer" },
+        { base: "burn", past: "burnt/burned", participle: "burnt/burned", spanish: "quemar" },
+        { base: "build", past: "built", participle: "built", spanish: "construir" }
     ],
     3: [
-        { base: "see", past: "saw", participle: "seen", spanish: "ver" },
+        { base: "buy", past: "bought", participle: "bought", spanish: "comprar" },
+        { base: "catch", past: "caught", participle: "caught", spanish: "atrapar" },
+        { base: "choose", past: "chose", participle: "chosen", spanish: "elegir" },
         { base: "come", past: "came", participle: "come", spanish: "venir" },
-        { base: "give", past: "gave", participle: "given", spanish: "dar" },
-        { base: "find", past: "found", participle: "found", spanish: "encontrar" },
-        { base: "tell", past: "told", participle: "told", spanish: "decir/contar" }
+        { base: "cost", past: "cost", participle: "cost", spanish: "costar" }
     ],
     4: [
-        { base: "become", past: "became", participle: "become", spanish: "convertirse" },
-        { base: "leave", past: "left", participle: "left", spanish: "dejar/salir" },
-        { base: "feel", past: "felt", participle: "felt", spanish: "sentir" },
-        { base: "bring", past: "brought", participle: "brought", spanish: "traer" },
-        { base: "begin", past: "began", participle: "begun", spanish: "empezar" }
+        { base: "cut", past: "cut", participle: "cut", spanish: "cortar" },
+        { base: "do", past: "did", participle: "done", spanish: "hacer" },
+        { base: "draw", past: "drew", participle: "drawn", spanish: "dibujar" },
+        { base: "dream", past: "dreamt/dreamed", participle: "dreamt/dreamed", spanish: "soñar" },
+        { base: "drink", past: "drank", participle: "drunk", spanish: "beber" }
     ],
     5: [
-        { base: "keep", past: "kept", participle: "kept", spanish: "mantener" },
-        { base: "hold", past: "held", participle: "held", spanish: "sostener" },
-        { base: "write", past: "wrote", participle: "written", spanish: "escribir" },
-        { base: "stand", past: "stood", participle: "stood", spanish: "estar de pie" },
-        { base: "hear", past: "heard", participle: "heard", spanish: "oír" }
+        { base: "drive", past: "drove", participle: "driven", spanish: "conducir" },
+        { base: "eat", past: "ate", participle: "eaten", spanish: "comer" },
+        { base: "fall", past: "fell", participle: "fallen", spanish: "caer" },
+        { base: "feed", past: "fed", participle: "fed", spanish: "alimentar" },
+        { base: "feel", past: "felt", participle: "felt", spanish: "sentir" }
     ],
     6: [
-        { base: "let", past: "let", participle: "let", spanish: "dejar/permitir" },
-        { base: "mean", past: "meant", participle: "meant", spanish: "significar" },
-        { base: "set", past: "set", participle: "set", spanish: "poner/establecer" },
-        { base: "meet", past: "met", participle: "met", spanish: "conocer/encontrar" },
-        { base: "run", past: "ran", participle: "run", spanish: "correr" }
+        { base: "fight", past: "fought", participle: "fought", spanish: "pelear" },
+        { base: "find", past: "found", participle: "found", spanish: "encontrar" },
+        { base: "fly", past: "flew", participle: "flown", spanish: "volar" },
+        { base: "forget", past: "forgot", participle: "forgotten", spanish: "olvidar" },
+        { base: "forgive", past: "forgave", participle: "forgiven", spanish: "perdonar" }
     ],
     7: [
-        { base: "pay", past: "paid", participle: "paid", spanish: "pagar" },
-        { base: "sit", past: "sat", participle: "sat", spanish: "sentarse" },
-        { base: "speak", past: "spoke", participle: "spoken", spanish: "hablar" },
-        { base: "lie", past: "lay", participle: "lain", spanish: "yacer/acostarse" },
-        { base: "lead", past: "led", participle: "led", spanish: "liderar/guiar" }
+        { base: "freeze", past: "froze", participle: "frozen", spanish: "congelar" },
+        { base: "get", past: "got", participle: "got", spanish: "obtener" },
+        { base: "give", past: "gave", participle: "given", spanish: "dar" },
+        { base: "go", past: "went", participle: "gone/been", spanish: "ir" },
+        { base: "grow", past: "grew", participle: "grown", spanish: "crecer" }
     ],
     8: [
-        { base: "read", past: "read", participle: "read", spanish: "leer" },
-        { base: "grow", past: "grew", participle: "grown", spanish: "crecer" },
-        { base: "lose", past: "lost", participle: "lost", spanish: "perder" },
-        { base: "fall", past: "fell", participle: "fallen", spanish: "caer" },
-        { base: "send", past: "sent", participle: "sent", spanish: "enviar" }
+        { base: "hang", past: "hung", participle: "hung", spanish: "colgar" },
+        { base: "have", past: "had", participle: "had", spanish: "tener" },
+        { base: "hear", past: "heard", participle: "heard", spanish: "oír" },
+        { base: "hide", past: "hid", participle: "hidden", spanish: "esconder" },
+        { base: "hit", past: "hit", participle: "hit", spanish: "golpear" }
     ],
     9: [
-        { base: "build", past: "built", participle: "built", spanish: "construir" },
-        { base: "understand", past: "understood", participle: "understood", spanish: "entender" },
-        { base: "draw", past: "drew", participle: "drawn", spanish: "dibujar" },
-        { base: "break", past: "broke", participle: "broken", spanish: "romper" },
-        { base: "spend", past: "spent", participle: "spent", spanish: "gastar" }
+        { base: "hold", past: "held", participle: "held", spanish: "sostener" },
+        { base: "hurt", past: "hurt", participle: "hurt", spanish: "herir" },
+        { base: "keep", past: "kept", participle: "kept", spanish: "mantener" },
+        { base: "know", past: "knew", participle: "known", spanish: "saber/conocer" },
+        { base: "lead", past: "led", participle: "led", spanish: "liderar/guiar" }
     ],
     10: [
-        { base: "cut", past: "cut", participle: "cut", spanish: "cortar" },
-        { base: "rise", past: "rose", participle: "risen", spanish: "levantarse" },
-        { base: "drive", past: "drove", participle: "driven", spanish: "conducir" },
-        { base: "buy", past: "bought", participle: "bought", spanish: "comprar" },
-        { base: "wear", past: "wore", participle: "worn", spanish: "llevar puesto" }
+        { base: "learn", past: "learnt/learned", participle: "learnt/learned", spanish: "aprender" },
+        { base: "leave", past: "left", participle: "left", spanish: "dejar/salir" },
+        { base: "lend", past: "lent", participle: "lent", spanish: "prestar" },
+        { base: "let", past: "let", participle: "let", spanish: "dejar/permitir" },
+        { base: "lie", past: "lay", participle: "lain", spanish: "yacer/acostarse" }
     ],
     11: [
-        { base: "choose", past: "chose", participle: "chosen", spanish: "elegir" },
-        { base: "seek", past: "sought", participle: "sought", spanish: "buscar" },
-        { base: "throw", past: "threw", participle: "thrown", spanish: "lanzar" },
-        { base: "catch", past: "caught", participle: "caught", spanish: "atrapar" },
-        { base: "teach", past: "taught", participle: "taught", spanish: "enseñar" }
+        { base: "lose", past: "lost", participle: "lost", spanish: "perder" },
+        { base: "make", past: "made", participle: "made", spanish: "hacer" },
+        { base: "meet", past: "met", participle: "met", spanish: "conocer/encontrar" },
+        { base: "pay", past: "paid", participle: "paid", spanish: "pagar" },
+        { base: "put", past: "put", participle: "put", spanish: "poner" }
     ],
     12: [
-        { base: "win", past: "won", participle: "won", spanish: "ganar" },
-        { base: "forget", past: "forgot", participle: "forgotten", spanish: "olvidar" },
-        { base: "fight", past: "fought", participle: "fought", spanish: "pelear" },
-        { base: "fly", past: "flew", participle: "flown", spanish: "volar" },
-        { base: "eat", past: "ate", participle: "eaten", spanish: "comer" }
+        { base: "read", past: "read", participle: "read", spanish: "leer" },
+        { base: "ride", past: "rode", participle: "ridden", spanish: "montar" },
+        { base: "ring", past: "rang", participle: "rung", spanish: "sonar/llamar" },
+        { base: "run", past: "ran", participle: "run", spanish: "correr" },
+        { base: "say", past: "said", participle: "said", spanish: "decir" }
     ],
     13: [
-        { base: "drink", past: "drank", participle: "drunk", spanish: "beber" },
-        { base: "swim", past: "swam", participle: "swum", spanish: "nadar" },
-        { base: "blow", past: "blew", participle: "blown", spanish: "soplar" },
-        { base: "steal", past: "stole", participle: "stolen", spanish: "robar" },
-        { base: "ride", past: "rode", participle: "ridden", spanish: "montar" }
+        { base: "see", past: "saw", participle: "seen", spanish: "ver" },
+        { base: "sell", past: "sold", participle: "sold", spanish: "vender" },
+        { base: "send", past: "sent", participle: "sent", spanish: "enviar" },
+        { base: "set", past: "set", participle: "set", spanish: "poner/establecer" },
+        { base: "shake", past: "shook", participle: "shaken", spanish: "sacudir" }
     ],
     14: [
-        { base: "wake", past: "woke", participle: "woken", spanish: "despertar" },
-        { base: "hide", past: "hid", participle: "hidden", spanish: "esconder" },
-        { base: "bite", past: "bit", participle: "bitten", spanish: "morder" },
-        { base: "shake", past: "shook", participle: "shaken", spanish: "sacudir" },
-        { base: "hang", past: "hung", participle: "hung", spanish: "colgar" }
-    ],
-    15: [
-        { base: "hit", past: "hit", participle: "hit", spanish: "golpear" },
-        { base: "hurt", past: "hurt", participle: "hurt", spanish: "herir" },
         { base: "shine", past: "shone", participle: "shone", spanish: "brillar" },
-        { base: "shoot", past: "shot", participle: "shot", spanish: "disparar" },
-        { base: "show", past: "showed", participle: "shown", spanish: "mostrar" }
-    ],
-    16: [
+        { base: "show", past: "showed", participle: "shown", spanish: "mostrar" },
         { base: "shut", past: "shut", participle: "shut", spanish: "cerrar" },
         { base: "sing", past: "sang", participle: "sung", spanish: "cantar" },
-        { base: "sink", past: "sank", participle: "sunk", spanish: "hundir" },
-        { base: "slide", past: "slid", participle: "slid", spanish: "deslizar" },
-        { base: "smell", past: "smelt", participle: "smelt", spanish: "oler" }
+        { base: "sit", past: "sat", participle: "sat", spanish: "sentarse" }
+    ],
+    15: [
+        { base: "sleep", past: "slept", participle: "slept", spanish: "dormir" },
+        { base: "speak", past: "spoke", participle: "spoken", spanish: "hablar" },
+        { base: "spell", past: "spelt/spelled", participle: "spelt/spelled", spanish: "deletrear" },
+        { base: "spend", past: "spent", participle: "spent", spanish: "gastar" },
+        { base: "stand", past: "stood", participle: "stood", spanish: "estar de pie" }
+    ],
+    16: [
+        { base: "steal", past: "stole", participle: "stolen", spanish: "robar" },
+        { base: "swim", past: "swam", participle: "swum", spanish: "nadar" },
+        { base: "take", past: "took", participle: "taken", spanish: "tomar" },
+        { base: "teach", past: "taught", participle: "taught", spanish: "enseñar" }
     ],
     17: [
-        { base: "sell", past: "sold", participle: "sold", spanish: "vender" },
-        { base: "spell", past: "spelt", participle: "spelt", spanish: "deletrear" },
-        { base: "stick", past: "stuck", participle: "stuck", spanish: "pegar" },
-        { base: "strike", past: "struck", participle: "struck", spanish: "golpear" },
-        { base: "swear", past: "swore", participle: "sworn", spanish: "jurar" }
+        { base: "tell", past: "told", participle: "told", spanish: "decir/contar" },
+        { base: "think", past: "thought", participle: "thought", spanish: "pensar" },
+        { base: "throw", past: "threw", participle: "thrown", spanish: "lanzar" },
+        { base: "understand", past: "understood", participle: "understood", spanish: "entender" }
     ],
     18: [
-        { base: "tear", past: "tore", participle: "torn", spanish: "rasgar" },
-        { base: "weep", past: "wept", participle: "wept", spanish: "llorar" },
-        { base: "bend", past: "bent", participle: "bent", spanish: "doblar" },
-        { base: "bet", past: "bet", participle: "bet", spanish: "apostar" },
-        { base: "cost", past: "cost", participle: "cost", spanish: "costar" }
+        { base: "wake", past: "woke", participle: "woken", spanish: "despertar" },
+        { base: "wear", past: "wore", participle: "worn", spanish: "llevar puesto" },
+        { base: "win", past: "won", participle: "won", spanish: "ganar" },
+        { base: "write", past: "wrote", participle: "written", spanish: "escribir" }
     ]
 };
 
@@ -577,7 +574,8 @@ function updateStageInfo() {
         const totalRetries = gameState.currentQuestions.length;
         document.getElementById('question-counter').textContent = `Retry ${retryCount} / ${totalRetries}`;
     } else {
-        document.getElementById('question-counter').textContent = `Question ${gameState.currentQuestionIndex + 1} / 10`;
+        const totalQuestions = STAGE_VERBS[gameState.currentStage].length * 2;
+        document.getElementById('question-counter').textContent = `Question ${gameState.currentQuestionIndex + 1} / ${totalQuestions}`;
     }
 }
 
